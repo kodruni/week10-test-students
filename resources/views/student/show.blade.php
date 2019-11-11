@@ -27,7 +27,7 @@
     <section class="detention-assign">
         <h2>Give detention</h2>
 
-        <form action="" method="post">
+        <form action="{{ action('StudentController@show') }}" method="post">
 
             <input type="text" name="subject" placeholder="Reason for detention">
 

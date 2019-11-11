@@ -19,4 +19,15 @@ class StudentController extends Controller
         $view->student = $student;
         return $view;
     }
+
+    public function index ($student_name)
+    {
+        $student = \App\Student::where('name', $student_name)
+            ->all();
+            ->orderBy($student_name,'asc');
+            
+        $view = view('student/index');
+        $view->student = $student;
+        return $view;
+    }
 }
